@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food App Menu</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .menu-card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .card {
+      width: 300px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+     
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+     
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .card p {
+      color: #888;
+    }
+  </style>
+
+  <title>Food App</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Food App</h1>
+  </header>
+<body>
+  <nav>
+    <ul>
+      <li><a href="apphtml.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cart.html">Cart <span id="cart-count">(0)</span></a></li>
+    </ul>
+  </nav>
+  <div class="menu-card">
+    <div class="card">
+      <img src="noodle.jpg" alt="Food 1" onclick="redirectToForm('Sezhwan Noodle', 120)">
+      <h3>Sezhwan Noodles</h3>
+      <p>Cost:120 per quantity</p><br>
+      <a href="#" onclick="addToCart('Sezhwan Noodle', 120)">Add To Cart</a>
+    
+    </div>  
+    <div class="card">
+      <img src="shawarmaa.jpg" alt="Food 2" onclick="redirectToForm('Shawarmaa', 110)">
+      <h3>Shawarmaa</h3>
+      <p>Cost:110 per quantity</p><br>
+      <a href="#" onclick="addToCart('Shawarmaa', 110)">Add To Cart</a>
+
+    </div>
+    <div class="card">
+      <img src="pavbhaji.jpg" alt="Food 3"  onclick="redirectToForm('Pav Bhaji', 80)">
+      <h3>Pav Bhajji</h3>
+      <p>Cost:80 per quantity</p><br>
+      <a href="#" onclick="addToCart('Pav Bhajji', 80)">Add To Cart</a>
+    </div>
+    <div class="card">
+      <img src="masalapoori.JPG" alt="Food 3"  onclick="redirectToForm('Masala Poori', 40)">
+      <h3>Masala Poori</h3>
+      <p>Cost:40 per quantity</p><br>
+      <a href="#" onclick="addToCart('Masala Poori', 40)">Add To Cart</a>
+    </div>
+      
+  </div>
+
+
+  <div class="menu-card">
+    <div class="card" >
+      <img src="rainbow.jpg" alt="Food 1" onclick="redirectToForm('Rainbow Cake', 120)">
+      <h3>Rainbow Cake</h3>
+      <p>Cost:120 per piece</p><br>
+      <a href="#" onclick="addToCart('Rainbow Cake', 120)">Add To Cart</a>
+    </div>
+    <div class="card">
+      <img src="naan.jpg" alt="Food 2"  onclick="redirectToForm('Naan', 70)">
+      <h3>Naaan</h3>
+      <p>Cost:70 per quantity</p><br>
+      <a href="#" onclick="addToCart('Naan', 70)">Add To Cart</a>
+    </div>
+    <div class="card">
+      <img src="pannerbutter.jpg" alt="Food 3" onclick="redirectToForm('Panner Butter Masala', 170)">
+      <h3>Panner Butter Masala</h3>
+      <p>Cost:170</p><br>
+      <a href="#" onclick="addToCart('Panner Butter Masala', 170)">Add To Cart</a>
+    </div>
+    <div class="card">
+      <img src="friedmomos.jpg" alt="Food 3"  onclick="redirectToForm('Fried Momos', 130)">
+      <h3>Fried Momos</h3>
+      <p>Cost:130 for 5 piece</p><br>
+      <a href="#" onclick="addToCart('Fried Momos', 130)">Add To Cart</a>
+    </div>
+     
+  </div>
+
+  <div class="menu-card">
+    <div class="card">
+      <img src="biriyani.jpg" alt="Food 1"  onclick="redirectToForm('Biriyani', 220)">
+      <h3>Biriyani</h3>
+      <p>Cost:220</p><br>
+      <a href="#" onclick="addToCart('Fried Momos', 130)">Add To Cart</a>
+    </div>
+    <div class="card" >
+      <img src="chilli.jpg" alt="Food 2" onclick="redirectToForm('Chilli Parotta', 50)">
+      <h3>Chilli Parotta</h3>
+      <p>Cost:50</p><br>
+      <a href="#" onclick="addToCart('Chilli Parotta', 130)">Add To Cart</a>
+    </div>
+    <div class="card" >
+      <img src="kothu.jpg" alt="Food 3" onclick="redirectToForm('Egg Parotta', 90)">
+      <h3>Egg Parotta</h3>
+      <p>Cost:90</p><br>
+      <a href="#" onclick="addToCart('Egg Parotta', 90)">Add To Cart</a>
+    </div>
+    <div class="card" >
+      <img src="dosa.jpg" alt="Food 3" onclick="redirectToForm('Dosa', 70)">
+      <h3>Dosa</h3>
+      <p>Cost:70 per item</p><br>
+      <a href="#" onclick="addToCart('Dosa', 70)">Add To Cart</a>
+    </div>
+     
+  </div>
+
+  <div class="menu-card">
+    <div class="card">
+      <img src="shakes.jpg" alt="Food 1"  onclick="redirectToForm('Shakes', 100)">
+      <h3>Shakes</h3>
+      <p>Cost:100</p><br>
+      <a href="#" onclick="addToCart('Shakes', 100)">Add To Cart</a>
+    </div>
+    <div class="card" >
+      <img src="popcorn.jpg" alt="Food 2" onclick="redirectToForm('Chicken Popcorn', 150)">
+      <h3>Chicken popcorn</h3>
+      <p>Cost:150</p><br>
+      <a href="#" onclick="addToCart('Chicken Popcorn', 130)">Add To Cart</a>
+    </div>
+    <div class="card" >
+      <img src="tanthoori.jpg" alt="Food 3" onclick="redirectToForm('Chicken Thanthoori', 150)">
+      <h3>Chicken Thanthoori</h3>
+      <p>Cost:150 for halfkg</p><br>
+      <a href="#" onclick="addToCart('Chicken Thanthoori', 130)">Add To Cart</a>
+    </div>
+    <div class="card" >
+      <img src="ice.jpg" alt="Food 3" onclick="redirectToForm('Icecream', 70)">
+      <h3>Ice Cream</h3>
+      <p>Cost:70 per scoop</p><br>
+      <a href="#" onclick="addToCart('Icecream', 70)">Add To Cart</a>
+    </div>
+       
+  </div>
+
+  <div class="menu-card">
+    <div class="card" onclick="redirectToForm('SandWitch', 130)">
+      <img src="sand.jpg" alt="Food 1">
+      <h3>SandWitch</h3>
+      <p>Cost:130</p><br>
+      <a href="#" onclick="addToCart('SandWitch', 130)">Add To Cart</a>
+    </div>
+    <div class="card" >
+      <img src="brownie.jpg" alt="Food 2" onclick="redirectToForm('Sizller Brownie', 270)">
+      <h3>Sizller Brownie</h3>
+      <p>Cost:270</p><br>
+      <a href="#" onclick="addToCart('Sizzler Brownie', 270)">Add To Cart</a>
+    </div>
+    <div class="card" >
+      <img src="cap.jpg" alt="Food 3" onclick="redirectToForm('Cappachino', 170)">
+      <h3>Cappachino</h3>
+      <p>Cost:170</p><br>
+      <a href="#" onclick="addToCart('Cappachino', 170)">Add To Cart</a>
+    </div>
+    <div class="card">
+      <img src="combo.jpg" alt="Food 3"  onclick="redirectToForm('Combo Meals', 240)">
+      <h3>Combo Meals</h3>
+      <p>Cost:240</p><br>
+      <a href="#" onclick="addToCart('Combo Meals', 240)">Add To Cart</a>
+    </div>
+       
+  </div>
+
+ 
+
+  <script src="cart.js"></script>
+  <footer>
+    <p>&copy; 2023 Food App. All rights reserved.</p>
+  </footer>
+</body>
+<script src="cart.js"></script>
+<script>
+  function addToCart(name, rate) {
+      var cartItems = localStorage.getItem('cartItems');
+
+      if (cartItems) {
+        cartItems = JSON.parse(cartItems);
+      } else {
+        cartItems = [];
+      }
+
+      var existingItemIndex = -1;
+      for (var i = 0; i < cartItems.length; i++) {
+        if (cartItems[i].name === name) {
+          existingItemIndex = i;
+          break;
+        }
+      }
+
+      if (existingItemIndex !== -1) {
+        cartItems[existingItemIndex].quantity++;
+      } else {
+        cartItems.push({
+          name: name,
+          rate: rate,
+          quantity: 1
+        });
+      }
+
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      updateCartCount();
+    }
+
+    function updateCartCount() {
+      var cartItems = localStorage.getItem('cartItems');
+      var cartCountElement = document.getElementById('cart-count');
+
+      if (cartItems) {
+        cartItems = JSON.parse(cartItems);
+        var totalCount = 0;
+
+        for (var i = 0; i < cartItems.length; i++) {
+          totalCount += cartItems[i].quantity;
+        }
+
+        cartCountElement.textContent = '(' + totalCount + ')';
+      } else {
+        cartCountElement.textContent = '(0)';
+      }
+    }
+ updateCartCount();
+   
+  
+  function redirectToForm(name, rate) {
+    
+    var encodedName = encodeURIComponent(name);
+    var encodedRate = encodeURIComponent(rate);
+  
+    
+    window.location.href = 'order.html?name=' + encodedName + '&rate=' + encodedRate;
+  }
+  </script>
+</html>
+
+
+

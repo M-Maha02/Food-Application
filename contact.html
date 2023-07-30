@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<header>
+    <h1>Food App</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="apphtml.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cart.html">Cart <span id="cart-count">(0)</span></a></li>
+    </ul>
+  </nav>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>For any inquiries or support, please fill out the form below or reach out to us using the provided contact information.</p>
+        
+        
+        <form action="contact.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <input type="submit" value="Submit" >
+        </form>
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Phone Number: 123-456-7890</p>
+            <p>Email: Maha@gmail.com</p>
+            <p>Address: 123 Main Street, City, Kovilpatti</p>
+        </div>
+    </div>
+    <script>
+        function updateCartCount() {
+      var cartItems = localStorage.getItem('cartItems');
+      var cartCountElement = document.getElementById('cart-count');
+
+      if (cartItems) {
+        cartItems = JSON.parse(cartItems);
+        var totalCount = 0;
+
+        for (var i = 0; i < cartItems.length; i++) {
+          totalCount += cartItems[i].quantity;
+        }
+
+        cartCountElement.textContent = '(' + totalCount + ')';
+      } else {
+        cartCountElement.textContent = '(0)';
+      }
+    }
+ updateCartCount();
+   
+    </script>
+    <footer>
+        <p>&copy; 2023 Food App. All rights reserved.</p>
+      </footer>
+</body>
+
+</html>
